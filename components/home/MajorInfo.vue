@@ -4,7 +4,7 @@
     <div class="clippath-circle clippath-circle-2"></div>
     <div class="clippath-circle clippath-circle-3"></div>
     <div class="clippath-circle clippath-circle-4"></div>
-    <div class="mx-auto max-w-7xl pt-16 sm:pt-24">
+    <div class="mx-auto max-w-7xl pt-16 sm:pt-24 grid items-center h-full">
       <div class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-8 z-30">
         <div
           class="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left z-30"
@@ -136,7 +136,7 @@
           </div>
         </div>
 
-        <div class="flex items-center w-full col-span-6">
+        <div class="flex items-center w-full col-span-6 z-30">
           <div class="w-full relative">
             <div class="swiper default-carousel swiper-container">
               <div class="swiper-wrapper">
@@ -248,13 +248,13 @@ swiper.value.on('slideChange', () => {
     }
   })
 
+  document
+    .querySelector(`.clippath-circle-${swiper.value.realIndex + 1}`)
+    .classList.add('active')
   if (swiper.value.realIndex !== 0) {
     document.querySelector('.clippath-circle-1').style.clipPath =
       `circle(5% at 0 ${(swiper.value.realIndex - 1) * 50}%)`
   }
-  document
-    .querySelector(`.clippath-circle-${swiper.value.realIndex + 1}`)
-    .classList.add('active')
 })
 
 const autoPlay = ref(0)
