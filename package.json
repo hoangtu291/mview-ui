@@ -22,6 +22,7 @@
     "nuxt": "^3.14.1592",
     "preline": "^2.7.0",
     "prettier": "^3.4.2",
+    "swiper": "^11.2.1",
     "tailwindcss-motion": "^1.0.1",
     "typescript": "^5.7.2",
     "v-wave": "^3.0.2",

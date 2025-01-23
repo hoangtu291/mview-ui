@@ -7,7 +7,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
+  css: [
+    '~/assets/css/tailwind.css',
+    '~/assets/css/main.css',
+    'swiper/swiper-bundle.css',
+  ],
   modules: ['@nuxtjs/color-mode', 'v-wave/nuxt', '@nuxtjs/google-fonts'],
   // plugins: ['~/plugins/flyonui.client.ts'],
   googleFonts: {
