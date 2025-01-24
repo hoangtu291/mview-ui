@@ -42,6 +42,7 @@
               autoplay
               loop
               src="https://lottie.host/aa6fce2e-b245-48f1-b8e9-9d4f626b6263/WiarahAZXk.lottie"
+              class="absolute inset-0"
             />
           </div>
         </div>
