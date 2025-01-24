@@ -1,22 +1,24 @@
 <template>
   <div>
     <div
-      class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden px-24"
+      class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden px-6 sm:px-12 md:px-24"
     >
-      <div class="container mx-auto px-6 grid grid-cols-2 relative py-16">
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 relative py-16"
+      >
         <div
           class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20 justify-center select-none"
         >
-          <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12"> </span>
+          <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12"></span>
           <h1
-            class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800"
+            class="font-bebas-neue uppercase text-4xl sm:text-6xl lg:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800"
           >
-            <span
-              >M<span class="text-amber-300">V</span
+            <span>
+              M<span class="text-amber-300">V</span
               ><span class="text-raspberry-300">I</span
-              ><span class="text-cyan-300">E</span>WS</span
-            >
-            <span class="text-3xl sm:text-7xl flex">
+              ><span class="text-cyan-300">E</span>WS
+            </span>
+            <span class="text-xl sm:text-3xl lg:text-7xl flex">
               <span class="text-cyan-300"> CREAT</span>
               <span class="text-raspberry-300"> IVITY</span>
             </span>
@@ -29,7 +31,7 @@
           <div class="flex mt-8">
             <UIButton
               content="Liên hệ"
-              class="bg-cyan-300 font-semibold w-fit px-6"
+              class="bg-cyan-300 font-semibold w-auto text-base sm:text-lg whitespace-nowrap"
             />
           </div>
         </div>

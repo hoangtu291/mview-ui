@@ -1,21 +1,24 @@
 <template>
-  <div class="bg-white p-20">
-    <div class="grid grid-cols-2 gap-10">
-      <div class="flex items-center p-10">
+  <div class="bg-white p-6 sm:p-10 md:p-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <!-- Section 1: Logo and Description -->
+      <div class="flex items-center p-6 sm:p-10">
         <div class="flex flex-col gap-4">
           <img src="/assets/logo-text.png" alt="mviews logo" width="128px" />
-          <span class="text-sm"
-            >Sáng tạo nội dung trên các nền tảng mạng xã hội. Tư vấn đào tạo học
+          <span class="text-sm sm:text-base">
+            Sáng tạo nội dung trên các nền tảng mạng xã hội. Tư vấn đào tạo học
             viên lĩnh vực đồ hoạ, thiết kế. Xây dựng kế hoạch phát triển các
             trang mạng xã hội. Lập trình, phát triển game trên mobile và máy
-            tính.</span
-          >
+            tính.
+          </span>
         </div>
       </div>
+
+      <!-- Section 2: Carousel -->
       <div class="flex items-center w-full h-full">
         <div
           v-wave
-          class="relative w-full max-w-4xl mx-auto"
+          class="relative w-full max-w-full mx-auto"
           @mouseover="clearCustomInterval"
           @mouseleave="startInterval"
         >

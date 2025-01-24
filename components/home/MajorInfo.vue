@@ -4,11 +4,9 @@
     <div class="clippath-circle clippath-circle-2"></div>
     <div class="clippath-circle clippath-circle-3"></div>
     <div class="clippath-circle clippath-circle-4"></div>
-    <div class="mx-auto max-w-7xl pt-16 sm:pt-24 grid items-center h-full">
-      <div class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-8 z-30">
-        <div
-          class="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left z-30"
-        >
+    <div class="mx-auto max-w-7xl pt-16 sm:pt-24 grid items-center h-full px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 z-30">
+        <div class="px-6 sm:text-center flex items-center lg:text-left z-30">
           <div class="space-y-8">
             <div class="space-y-4">
               <div class="space-y-2">
@@ -36,7 +34,6 @@
                 Sáng tạo nội dung độc đáo, tư vấn chiến lược marketing toàn
                 diện, hợp tác quảng cáo hiệu quả và cung cấp các giải pháp
                 digital marketing tối ưu cho doanh nghiệp của bạn.
-                {{ swiper.realIndex }}
               </p>
             </div>
 
@@ -136,7 +133,7 @@
           </div>
         </div>
 
-        <div class="flex items-center w-full col-span-6 z-30">
+        <div class="flex items-center w-full h-full z-30">
           <div class="w-full relative">
             <div class="swiper default-carousel swiper-container">
               <div class="swiper-wrapper">
@@ -258,7 +255,6 @@ swiper.value.on('slideChange', () => {
 })
 
 const autoPlay = ref(0)
-// 1 =>0, 2 => 50, 3 => 100
 </script>
 
 <style>
@@ -281,6 +277,12 @@ const autoPlay = ref(0)
 }
 .slide-content:hover {
   box-shadow: 0px 0px 15px #49addd;
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+    box-shadow: 0px 0px 15px #49addd;
+  }
 }
 
 .clippath-circle-1 {

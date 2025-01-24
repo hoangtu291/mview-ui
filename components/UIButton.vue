@@ -1,7 +1,7 @@
 <template>
   <button
     v-wave
-    class="btn btn-primary max-lg:btn-square bg-cyan-500 hover:bg-cyan-700 rounded-full border-none active:motion-preset-confetti motion-duration-700"
+    class="btn btn-primary bg-cyan-500 px-6 hover:bg-cyan-700 rounded-full border-none active:motion-preset-confetti motion-duration-700 flex items-center justify-center text-center"
   >
     {{ content }}
   </button>
