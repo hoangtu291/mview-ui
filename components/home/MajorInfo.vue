@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="h-screen w-screen bg-black">
     <div class="clippath-circle clippath-circle-1"></div>
@@ -6,35 +7,30 @@
     <div class="clippath-circle clippath-circle-4"></div>
     <div class="mx-auto max-w-7xl pt-16 sm:pt-24 grid items-center h-full px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 z-30">
-        <div class="px-6 sm:text-center flex items-center lg:text-left z-30">
+        <div
+          class="px-6 sm:text-center flex items-center lg:text-left z-30 select-none"
+        >
           <div class="space-y-8">
             <div class="space-y-4">
               <div class="space-y-2">
-                <span
-                  class="rounded-full uppercase bg-amber-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white"
-                >
-                  Early Access
-                </span>
+                <span v-html="chip"></span>
                 <h1
                   class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
                 >
-                  <span class="sm:text-6xl"> </span> Sáng tạo nội dung với
-                  <span
-                    class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-600"
-                    >mViews
-                  </span>
-                  <br />
-                  ngay.
+                  <span v-html="textTitle"></span>
                 </h1>
               </div>
 
               <p
                 class="text-base text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
               >
-                Sáng tạo nội dung độc đáo, tư vấn chiến lược marketing toàn
-                diện, hợp tác quảng cáo hiệu quả và cung cấp các giải pháp
-                digital marketing tối ưu cho doanh nghiệp của bạn.
+                {{ textContent }}
               </p>
+              <UIButton
+                v-if="swiper.realIndex === 3"
+                content="Liên hệ ngay"
+                class="bg-cyan-300 font-semibold w-auto text-base sm:text-lg whitespace-nowrap"
+              />
             </div>
 
             <div class="border-t border-gray-700"></div>
@@ -136,7 +132,7 @@
         <div class="flex items-center w-full h-full z-30">
           <div class="w-full relative">
             <div class="swiper default-carousel swiper-container">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper flex items-center">
                 <div class="swiper-slide">
                   <div
                     class="slide-content h-96 lg:h-100% scale-90 w-full max-w-2xl col-span-6 flex items-center mx-auto hover:shadow-lg rounded-md"
@@ -162,30 +158,56 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div
-                    class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
-                  >
-                    <span class="text-3xl font-semibold text-indigo-600"
-                      >Slide 2
-                    </span>
+                  <div class="rounded-2xl flex justify-center items-center">
+                    <div
+                      className="grid grid-cols-4 gap-1 w-full h-full sm:grid-cols-3"
+                    >
+                      <div
+                        className="col-span-2 rounded-md hover:motion-preset-confetti motion-duration-300 bg-[url('/assets/major/major-aboutus-1.png')] bg-cover"
+                        style="aspect-ratio: 2 / 1"
+                      ></div>
+                      <div
+                        className="hover:motion-preset-confetti motion-duration-300 col-span-1 rounded-md bg-[url('/assets/major/major-aboutus-2.png')] bg-cover aspect-square"
+                      ></div>
+                      <div
+                        className="hover:motion-preset-confetti motion-duration-300 col-span-1 rounded-md bg-[url('/assets/major/major-aboutus-3.png')] bg-cover aspect-square"
+                      ></div>
+                      <div
+                        className="hover:motion-preset-confetti motion-duration-300 col-span-1 rounded-md bg-[url('/assets/major/major-aboutus-4.png')] bg-cover aspect-square"
+                      ></div>
+                      <div
+                        className="hover:motion-preset-confetti motion-duration-300 col-span-1 rounded-md bg-[url('/assets/major/major-aboutus-5.png')] bg-cover aspect-square"
+                      ></div>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div
-                    class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+                    class="slide-content h-96 lg:h-100% scale-90 w-full max-w-2xl col-span-6 flex items-center mx-auto hover:shadow-lg rounded-md"
+                    :class="'hover:shadow-cyan-300 hover:scale-95 transition-all duration-300 ease-in-out'"
+                    @click="autoPlay = Math.abs(autoPlay - 1)"
                   >
-                    <span class="text-3xl font-semibold text-indigo-600"
-                      >Slide 3
-                    </span>
+                    <div style="width: 100%; height: 100%">
+                      <div
+                        class="w-full h-full bg-[url('/assets/major/slide-4.png')] bg-contain bg-no-repeat scale-90 hover:scale-95"
+                      ></div>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div
-                    class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+                    class="slide-content h-96 lg:h-100% scale-90 w-full max-w-2xl col-span-6 flex items-center mx-auto hover:shadow-lg rounded-md"
+                    :class="'hover:shadow-cyan-300 hover:scale-95 transition-all duration-300 ease-in-out hover:bg-slate-200'"
+                    @click="autoPlay = Math.abs(autoPlay - 1)"
                   >
-                    <span class="text-3xl font-semibold text-indigo-600"
-                      >Slide 4
-                    </span>
+                    <div style="width: 100%; height: 100%">
+                      <DotLottieVue
+                        style="width: 100%; height: 100%"
+                        autoplay
+                        loop
+                        src="https://lottie.host/ef7ef9b5-ab45-4127-9348-fd550c1b0afb/tLOQgJXB4h.lottie"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -205,10 +227,14 @@
 </template>
 
 <script lang="js" setup>
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 import { Swiper } from 'swiper'
 
 import { onMounted } from 'vue'
 
+const textTitle = ref('')
+const textContent = ref('')
+const chip = ref('')
 const swiperOptions = {
   loop: true,
   pagination: {
@@ -233,13 +259,14 @@ const swiperOptions = {
 const swiper = ref(new Swiper('.default-carousel', swiperOptions))
 onMounted(() => {
   swiper.value.init()
+  buildText()
 })
 
 swiper.value.on('slideChange', () => {
   document.querySelectorAll('.clippath-circle').forEach((element, index) => {
-    element.classList.remove('active', 'z-10', 'z-0')
-    if (index !== swiper.value.realIndex) {
-      element.classList.add('z-10')
+    element.classList.remove('active', 'z-5', 'z-0', 'z-5')
+    if (index === swiper.value.realIndex) {
+      element.classList.add('z-5')
     } else {
       element.classList.add('z-0')
     }
@@ -252,9 +279,60 @@ swiper.value.on('slideChange', () => {
     document.querySelector('.clippath-circle-1').style.clipPath =
       `circle(5% at 0 ${(swiper.value.realIndex - 1) * 50}%)`
   }
+  setTimeout(() => {
+    buildText()
+  }, 300)
 })
 
 const autoPlay = ref(0)
+
+const buildText = () => {
+  if (swiper.value.realIndex === 1) {
+    textTitle.value = 'Mạng xã hội'
+    textContent.value =
+      'Chúng tôi tập trung phát triển và xây dựng trên nhiều lĩnh vực, tổ chức đào tạo và tạo các cơ hội tiềm năng.'
+    chip.value = `<span
+                  class="rounded-full uppercase bg-black px-3 py-0.5 text-sm font-semibold leading-5 text-white"
+                >
+                  About us
+                </span>`
+  } else if (swiper.value.realIndex === 2) {
+    textTitle.value = 'Sự thành công'
+    textContent.value =
+      'Theo thông tin từ Youtube Analyst (viewstats.com) chúng tôi thu được lượng người quan tâm tăng đáng kể. Là kết quả cũng như kinh nghiệm tích luỹ. Bạn cũng có thể làm được, hãy liên hệ chúng tôi để được tư vấn.'
+    chip.value = `<span
+                  class="rounded-full uppercase bg-black px-3 py-0.5 text-sm font-semibold leading-5 text-white"
+                >
+                  About us
+                </span>`
+  } else if (swiper.value.realIndex === 3) {
+    textTitle.value = `<span
+                    class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-600"
+                    >Liên hệ ngay với </br> chúng tôi
+                  </span>`
+    textContent.value =
+      'Liên hệ cho ngay cho chúng tôi để được hướng dẫn và tư vấn.'
+    chip.value = `<span
+                  class="rounded-full uppercase bg-raspberry-400 px-3 py-0.5 text-sm font-semibold leading-5 text-white"
+                >
+                  Contact us
+                </span>`
+  } else {
+    textTitle.value = `Sáng tạo nội dung với
+                  <span
+                    class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-600"
+                    >mViews
+                  </span>`
+    textContent.value = `Sáng tạo nội dung độc đáo, tư vấn chiến lược marketing toàn
+                diện, hợp tác quảng cáo hiệu quả và cung cấp các giải pháp
+                digital marketing tối ưu cho doanh nghiệp của bạn.`
+    chip.value = `<span
+                  class="rounded-full uppercase bg-cyan-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white"
+                >
+                  Early Access
+                </span>`
+  }
+}
 </script>
 
 <style>

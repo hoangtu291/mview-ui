@@ -4,7 +4,7 @@
       class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden px-6 sm:px-12 md:px-24"
     >
       <div
-        class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 relative py-16"
+        class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 relative py-16"
       >
         <div
           class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20 justify-center select-none"
@@ -42,7 +42,6 @@
               autoplay
               loop
               src="https://lottie.host/aa6fce2e-b245-48f1-b8e9-9d4f626b6263/WiarahAZXk.lottie"
-              class="absolute inset-0"
             />
           </div>
         </div>
