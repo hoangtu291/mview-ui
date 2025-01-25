@@ -135,7 +135,7 @@
               <div class="swiper-wrapper flex items-center">
                 <div class="swiper-slide">
                   <div
-                    class="slide-content h-96 lg:h-100% scale-90 w-full max-w-2xl col-span-6 flex items-center mx-auto hover:shadow-lg rounded-md"
+                    class="slide-content slide-content-yt h-96 lg:h-100% scale-90 w-full max-w-2xl col-span-6 flex items-center mx-auto hover:shadow-lg rounded-md"
                     :class="'hover:shadow-cyan-300 hover:scale-95 transition-all duration-300 ease-in-out'"
                     @click="autoPlay = Math.abs(autoPlay - 1)"
                   >
@@ -358,7 +358,7 @@ const buildText = () => {
 }
 
 @media (max-width: 768px) {
-  .slide-content {
+  .slide-content-yt {
     box-shadow: 0px 0px 15px #49addd;
   }
 }
