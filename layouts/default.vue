@@ -12,6 +12,13 @@ import Header from '~/components/Header.vue'
 
 useHead({
   title: 'Trang Chủ | mViews',
+  link: [
+    {
+      rel: 'icon',
+      href: '/assets/logo.png', // Đường dẫn tới favicon của bạn
+      type: 'image/x-icon', // Loại của tệp favicon
+    },
+  ],
   meta: [
     {
       name: 'description',

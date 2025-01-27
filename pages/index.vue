@@ -32,6 +32,7 @@
             <UIButton
               content="Liên hệ"
               class="bg-cyan-300 font-semibold w-auto text-base sm:text-lg whitespace-nowrap"
+              @click="navigateToPage"
             />
           </div>
         </div>
@@ -56,4 +57,7 @@
 
 <script lang="ts" setup>
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+function navigateToPage() {
+  window.open('https://zalo.me/0939655757', '_blank')
+}
 </script>

@@ -30,6 +30,7 @@
                 v-if="swiper.realIndex === 3"
                 content="Liên hệ ngay"
                 class="bg-cyan-300 font-semibold w-auto text-base sm:text-lg whitespace-nowrap"
+                @click="navigateToPage"
               />
             </div>
 
@@ -332,6 +333,9 @@ const buildText = () => {
                   Early Access
                 </span>`
   }
+}
+function navigateToPage() {
+  window.open('https://zalo.me/0939655757', '_blank')
 }
 </script>
 

@@ -17,14 +17,48 @@
       <NuxtLink class="link link-hover" to="/contact">Liên hệ</NuxtLink>
     </nav>
     <div class="flex h-5 gap-4">
-      <a href="#" class="link" aria-label="Github Link">
+      <a
+        href="mailto:huyxiao@gmail.com?subject=MViews Tư vấn&body=Tôi muốn được tư vấn về "
+        target="_blank"
+        class="link"
+        aria-label="Github Link"
+      >
+        <span class="icon-[tabler--mail] size-5"></span>
+      </a>
+      <a
+        href="https://youtube.com/@crewtoon_huy?si=Vi6JJ7f_BSPo66qk"
+        target="_blank"
+        class="link"
+        aria-label="Github Link"
+      >
         <span class="icon-[tabler--brand-youtube] size-5"></span>
       </a>
-      <a href="#" class="link" aria-label="Facebook Link">
+      <a
+        href="https://www.facebook.com/balutoon?mibextid=ZbWKwL"
+        target="_blank"
+        class="link"
+        aria-label="Facebook Link"
+      >
         <span class="icon-[tabler--brand-facebook] size-5"></span>
       </a>
-      <a href="#" class="link" aria-label="X Link">
+      <a
+        href="https://zalo.me/0939655757"
+        target="_blank"
+        class="link"
+        aria-label="X Link"
+      >
         <span class="icon-[tabler--circle-letter-z] size-5"></span>
+      </a>
+    </div>
+    <div class="flex">
+      <a href="https://zalo.me/0939655757" target="_blank">093 965 57 57</a> |
+      <a
+        href="mailto:huyxiao@gmail.com?subject=MViews Tư vấn"
+        target="_blank"
+        class="link"
+        aria-label="Github Link"
+      >
+        huyxiao@gmail.com
       </a>
     </div>
   </footer>

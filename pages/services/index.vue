@@ -5,7 +5,7 @@
       width="100%"
       class="select-none"
     />
-    <section class="grid grid-cols-1 gap-10 items-center pl-10 my-6">
+    <section class="grid grid-cols-1 gap-10 items-center px-10 my-6">
       <div class="flex justify-center w-full">
         <img src="/assets/logo-text.png" alt="mviews logo" width="150px" />
       </div>
