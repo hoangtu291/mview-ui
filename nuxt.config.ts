@@ -18,7 +18,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-phosphor-icons',
   ],
-  // plugins: ['~/plugins/flyonui.client.ts'],
   googleFonts: {
     families: {
       Manrope: [100, 200, 300, 400, 500, 600, 700, 800],
