@@ -12,7 +12,12 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     'swiper/swiper-bundle.css',
   ],
-  modules: ['@nuxtjs/color-mode', 'v-wave/nuxt', '@nuxtjs/google-fonts'],
+  modules: [
+    '@nuxtjs/color-mode',
+    'v-wave/nuxt',
+    '@nuxtjs/google-fonts',
+    'nuxt-phosphor-icons',
+  ],
   // plugins: ['~/plugins/flyonui.client.ts'],
   googleFonts: {
     families: {

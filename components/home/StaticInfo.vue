@@ -1,16 +1,40 @@
 <template>
   <div class="bg-white p-6 sm:p-10 md:p-20">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 text-justify">
       <!-- Section 1: Logo and Description -->
+      <div
+        class="col-span-full grid grid-cols-1 sm:grid-cols-2 gap-10 items-center pl-10"
+      >
+        <img src="/assets/logo-text.png" alt="mviews logo" width="128px" />
+        Chúng tôi cung cấp giải pháp sáng tạo và phát triển toàn diện cho các
+        doanh nghiệp, cá nhân muốn xây dựng thương hiệu và tăng trưởng trên các
+        nền tảng số. Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cam kết
+        mang đến những dịch vụ chất lượng, tối ưu hóa hiệu quả marketing và sáng
+        tạo nội dung.
+      </div>
       <div class="flex items-center p-6 sm:p-10">
         <div class="flex flex-col gap-4">
-          <img src="/assets/logo-text.png" alt="mviews logo" width="128px" />
-          <span class="text-sm sm:text-base">
-            Sáng tạo nội dung trên các nền tảng mạng xã hội. Tư vấn đào tạo học
-            viên lĩnh vực đồ hoạ, thiết kế. Xây dựng kế hoạch phát triển các
-            trang mạng xã hội. Lập trình, phát triển game trên mobile và máy
-            tính.
-          </span>
+          <ul class="timeline timeline-vertical">
+            <li v-for="(item, index) in services" :key="item">
+              <div
+                v-wave
+                class="timeline-box bg-white select-none active:motion-preset-confetti motion-duration-300"
+                :class="index % 2 == 0 ? 'timeline-start' : 'timeline-end'"
+              >
+                {{ item }}
+              </div>
+              <div class="timeline-middle">
+                <span
+                  class="bg-raspberry-500/20 flex size-4.5 items-center justify-center rounded-full"
+                >
+                  <span
+                    class="badge badge-primary bg-raspberry-300 size-3 rounded-full p-0"
+                  ></span>
+                </span>
+              </div>
+              <hr />
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -111,6 +135,15 @@ function scrollCarousel(direction: number): void {
   currentIndex = (currentIndex + direction + totalSlides) % totalSlides
   carousel.style.transform = `translateX(-${currentIndex * 100}%)`
 }
+
+const services = [
+  'Sáng tạo nội dung trên các nền tảng mạng xã hội',
+  'Đào tạo học viên lĩnh vực đồ hoạ, hoạt hình,..',
+  'Tư vấn xây dựng kênh tiktok, youtube,...',
+  'Lập trình, phát triển game mobile, PC',
+  'Quảng cáo, hợp tác kéo kênh trên nền tảng tiktok, facebok, youtube...',
+  'Thiết kế nội dung theo yêu cầu của khách hàng',
+]
 
 let intervalId: ReturnType<typeof setInterval> | null = null
 

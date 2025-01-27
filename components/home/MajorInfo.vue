@@ -197,7 +197,7 @@
                 <div class="swiper-slide">
                   <div
                     class="slide-content h-96 lg:h-100% scale-90 w-full max-w-2xl col-span-6 flex items-center mx-auto hover:shadow-lg rounded-md"
-                    :class="'hover:shadow-cyan-300 hover:scale-95 transition-all duration-300 ease-in-out hover:bg-slate-200'"
+                    :class="'hover:shadow-cyan-300 hover:scale-95 transition-all duration-300 ease-in-out md:hover:bg-slate-200 hover:bg-transparent'"
                     @click="autoPlay = Math.abs(autoPlay - 1)"
                   >
                     <div style="width: 100%; height: 100%">

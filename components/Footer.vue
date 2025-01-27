@@ -5,16 +5,16 @@
     <div class="flex items-center gap-2 text-xl font-bold">
       <div
         style="width: 300px; height: 100px"
-        class="bg-[url('/assets/logo-label.png')] bg-contain"
+        class="bg-[url('/assets/logo-label.jpeg')] bg-contain"
       ></div>
     </div>
     <aside>
       <p>©2025MViews</p>
     </aside>
     <nav class="grid-flow-col gap-4">
-      <a class="link link-hover" href="#">Trang chủ</a>
-      <a class="link link-hover" href="#">Dịch vụ</a>
-      <a class="link link-hover" href="#">Liên hệ</a>
+      <NuxtLink class="link link-hover" to="/">Trang chủ</NuxtLink>
+      <NuxtLink class="link link-hover" to="/services">Dịch vụ</NuxtLink>
+      <NuxtLink class="link link-hover" to="/contact">Liên hệ</NuxtLink>
     </nav>
     <div class="flex h-5 gap-4">
       <a href="#" class="link" aria-label="Github Link">
